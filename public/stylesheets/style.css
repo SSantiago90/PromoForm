@@ -109,3 +109,7 @@ span.input-group-addon i {
 	font-size: 11px;
 	text-align: center;
 }
+
+small{
+    font-size: 9px;
+}
