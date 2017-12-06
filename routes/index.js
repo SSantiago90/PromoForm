@@ -14,7 +14,7 @@ router.get('/new', function(req, res, next) {
   res.render('index', { title: 'Supermercado El Mundo - Sorteo de Navidad' });
 });
 
-router.post('/new', bodyParser.urlencoded({extended:false}), modelCtrl.crear);
+router.post('/new', bodyParser.urlencoded({extended : false}), modelCtrl.crear);
 
 module.exports = router;
 

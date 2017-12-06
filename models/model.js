@@ -11,7 +11,7 @@ var personSchema = new mongoose.Schema({
 });
 
 //create new model
-var Person = mongoose.model('Person', personSchema);
+exports.Person = mongoose.model('Person', personSchema);
     
 exports.testdata = function(req,res,next){
     var prueba = Person({
