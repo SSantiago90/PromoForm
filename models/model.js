@@ -10,9 +10,16 @@ var personSchema = new mongoose.Schema({
     tel: String
 });
 
+var ipSchema = new mongoose.Schema({
+    ip: String
+});
+
 //create new model
 exports.Person = mongoose.model('Person', personSchema);
     
+exports.ListIPs = mongoose.model('ListIPs', ipSchema);
+
+
 exports.testdata = function(req,res,next){
     var prueba = Person({
         nombre: 'Santiago',
