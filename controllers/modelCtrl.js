@@ -2,13 +2,13 @@ var model = require('../models/model.js');
 var mongoose = require('mongoose');
 exports.crear = function (req,res,next) {
   if (!req.body) return res.sendStatus(400);        
-  var usrIp = req.ip;
+  var usrIp = req.ip;  
   usrIp += '';
   model.ListIPs.findOne({ip: usrIp}, function(err,result){	  	
 		if (err) throw err;
-		console.log('result del check '+result);
-	  	if(result) {
-	  		console.log('already registered');
+		var localSubm = localStorage.getItem("submited");
+	  	if(localSubm==='true') {
+	  		console.log('already registered user');
   			res.render('gracias-ya.ejs');
 	  	}
 	  	else {
@@ -23,6 +23,7 @@ exports.crear = function (req,res,next) {
 };
         
 function saveIp(usrIp){
+	localStorage.setItem("submited","true");
 	var newip = model.ListIPs({ip:usrIp}).save(function(err){
 		if (err) throw err;
 		console.log('saved iplist');
