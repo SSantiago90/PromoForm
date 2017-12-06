@@ -16,7 +16,7 @@ exports.crear = function (req,res,next) {
 		  	var particip = model.Person(req.body).save(function(err){
 		        if(err) throw err;
 		        console.log('saved user');   
-		        saveIp(userip);
+		        saveIp(usrIp);
 		        res.render('gracias.ejs', {'nombre' : req.body.nombre});
 	 	 	});
  		};
