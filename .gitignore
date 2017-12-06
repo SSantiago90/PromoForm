@@ -52,4 +52,5 @@ Temporary Items
 
 node-modules
 npm-debug.log
+scratch
 .env
