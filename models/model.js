@@ -7,18 +7,18 @@ var personSchema = new mongoose.Schema({
     nombre: String,
     apellido: String,
     email: String,
-    tel: Number
+    tel: String
 });
 
 //create new model
 var Person = mongoose.model('Person', personSchema);
     
-exports.new = function(req,res,next){
+exports.testdata = function(req,res,next){
     var prueba = Person({
         nombre: 'Santiago',
         apellido: 'Salkin',
         email: 'salkin.santiago@gmail.com',
-        tel: 3434522996
+        tel: '3434522996'
     }).save(function(err){
         if(err) throw err;
         console.log('uploaded');    
