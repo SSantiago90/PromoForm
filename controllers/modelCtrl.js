@@ -4,8 +4,7 @@ exports.crear = function (req,res,next) {
   if (!req.body) return res.sendStatus(400);        
   var usrIp = req.ip;
   usrIp += '';
-	//
-	model.ListIPs.findOne({ip: usrIp}, function(err,result){	  	
+  model.ListIPs.findOne({ip: usrIp}, function(err,result){	  	
 		if (err) throw err;
 		console.log('result del check '+result);
 	  	if(result) {
