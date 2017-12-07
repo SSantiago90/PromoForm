@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://AdminElMundo:NavidadPingus2017@ds129043.mlab.com:29043/participantes-elmundo');
+mongoose.connect('mongodb://Admin207:ElMundoColon-17>@ds011248.mlab.com:11248/promonavidad-super207');
 
 //create a schema
 var personSchema = new mongoose.Schema({
