@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Supermercado El Mundo - Sorteo de Navidad' });
+  res.render('index', { title: 'Supermercado 207 - Sorteo de Navidad' });
 });
 
 router.get('/new', function(req, res, next) {
-  res.render('index', { title: 'Supermercado El Mundo - Sorteo de Navidad' });
+  res.render('index', { title: 'Supermercado 207 - Sorteo de Navidad' });
 });
 
 router.post('/new', bodyParser.urlencoded({extended : false}), modelCtrl.crear);
