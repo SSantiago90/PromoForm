@@ -5,12 +5,7 @@ exports.crear = function (req,res,next) {
   var usrIp = req.ip;  
   usrIp += '';
   model.ListIPs.findOne({ip: usrIp}, function(err,result){	  	
-		if (err) throw err;
-		var localSubm = localStorage.getItem("submited");
-	  	if(localSubm==='true') {
-	  		console.log('already registered user');
-  			res.render('gracias-ya.ejs');
-	  	}
+		if (err) throw err;	  	
 	  	else {
 		  	var particip = model.Person(req.body).save(function(err){
 		        if(err) throw err;
@@ -23,7 +18,6 @@ exports.crear = function (req,res,next) {
 };
         
 function saveIp(usrIp){
-	localStorage.setItem("submited","true");
 	var newip = model.ListIPs({ip:usrIp}).save(function(err){
 		if (err) throw err;
 		console.log('saved iplist');
