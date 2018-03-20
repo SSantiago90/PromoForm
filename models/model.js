@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://Admin207:Super207-colon@ds011248.mlab.com:11248/promonavidad-super207');
+
+mongoose.connect('mongodb://Admin207:207admin207@ds117749.mlab.com:17749/sorteopascua207');
 
 //create a schema
 var personSchema = new mongoose.Schema({
@@ -22,8 +23,8 @@ exports.ListIPs = mongoose.model('ListIPs', ipSchema);
 
 exports.testdata = function(req,res,next){
     var prueba = Person({
-        nombre: 'Santiago',
-        apellido: 'Salkin',
+        nombre: 'Admin',
+        apellido: 'Istrador',
         email: 'salkin.santiago@gmail.com',
         tel: '3434522996'
     }).save(function(err){
